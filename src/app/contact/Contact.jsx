@@ -1,7 +1,75 @@
+'use client';
 import Image from "next/image";
 import Link from "next/link";
+import Swal from 'sweetalert2';
 
 const Contact = () => {
+    
+    // Common input styles
+    const inputStyles = {
+        color: '#333',
+        backgroundColor: '#fff',
+        border: '1px solid #ddd',
+        padding: '12px 15px',
+        borderRadius: '5px',
+        fontSize: '14px',
+        width: '100%',
+        transition: 'all 0.3s ease',
+        outline: 'none'
+    };
+
+    const focusStyles = {
+        borderColor: '#0BBEF2',
+        boxShadow: '0 0 0 3px rgba(11, 190, 242, 0.1)'
+    };
+    
+    // Handle form submission
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(e.target);
+        const formValues = Object.fromEntries(formData);
+        
+        // Validate required fields
+        if (!formValues.name || !formValues.email || !formValues.message) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please fill in all required fields (Name, Email, and Message)!',
+                confirmButtonColor: '#0BBEF2'
+            });
+            return;
+        }
+        
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formValues.email)) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid Email',
+                text: 'Please enter a valid email address!',
+                confirmButtonColor: '#0BBEF2'
+            });
+            return;
+        }
+        
+        // Show success message
+        Swal.fire({
+            icon: 'success',
+            title: 'Message Sent Successfully!',
+            text: 'Thank you for contacting us. We will get back to you as soon as possible.',
+            confirmButtonText: 'Great!',
+            confirmButtonColor: '#0BBEF2',
+            showConfirmButton: true,
+            timer: 5000,
+            timerProgressBar: true
+        }).then(() => {
+            // Reset form after confirmation
+            e.target.reset();
+        });
+    };
+
     return  (
         <>
         <section className="breadcrumb__area fixs p-relative breadcrumb__space breadcrumb__bg ">
@@ -91,31 +159,87 @@ const Contact = () => {
                 <div className="tp-contact-area">
                     <div className="tp-contact__form wow fadeInRight" data-wow-delay=".3s" data-wow-duration="1s">
                         <h2 className="pb-15">Let's Talk</h2>
-                        <form id="contact-form" action="#" method="POST">
+                        <form id="contact-form" onSubmit={handleSubmit}>
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className="tp-contact__input">
-                                        <input name="name" type="text" placeholder="First Name"/>
+                                        <input 
+                                            name="name" 
+                                            type="text" 
+                                            placeholder="First Name" 
+                                            required
+                                            style={inputStyles}
+                                            onFocus={(e) => Object.assign(e.target.style, focusStyles)}
+                                            onBlur={(e) => {
+                                                e.target.style.borderColor = '#ddd';
+                                                e.target.style.boxShadow = 'none';
+                                            }}
+                                        />
                                     </div>
                                 </div>
                                 <div className="col-md-6">
                                     <div className="tp-contact__input">
-                                        <input name="l_name" type="text" placeholder="Last Name"/>
+                                        <input 
+                                            name="l_name" 
+                                            type="text" 
+                                            placeholder="Last Name"
+                                            style={inputStyles}
+                                            onFocus={(e) => Object.assign(e.target.style, focusStyles)}
+                                            onBlur={(e) => {
+                                                e.target.style.borderColor = '#ddd';
+                                                e.target.style.boxShadow = 'none';
+                                            }}
+                                        />
                                     </div>
                                 </div>
                                 <div className="col-md-6">
                                     <div className="tp-contact__input">
-                                        <input name="email" type="email" placeholder="Email"/>
+                                        <input 
+                                            name="email" 
+                                            type="email" 
+                                            placeholder="Email" 
+                                            required
+                                            style={inputStyles}
+                                            onFocus={(e) => Object.assign(e.target.style, focusStyles)}
+                                            onBlur={(e) => {
+                                                e.target.style.borderColor = '#ddd';
+                                                e.target.style.boxShadow = 'none';
+                                            }}
+                                        />
                                     </div>
                                 </div>
                                 <div className="col-md-6">
                                     <div className="tp-contact__input">
-                                        <input name="phone" type="text" placeholder="Phone Number"/>
+                                        <input 
+                                            name="phone" 
+                                            type="text" 
+                                            placeholder="Phone Number"
+                                            style={inputStyles}
+                                            onFocus={(e) => Object.assign(e.target.style, focusStyles)}
+                                            onBlur={(e) => {
+                                                e.target.style.borderColor = '#ddd';
+                                                e.target.style.boxShadow = 'none';
+                                            }}
+                                        />
                                     </div>
                                 </div>
                                 <div className="col-md-12">
                                     <div className="tp-contact__input">
-                                        <textarea name="message" placeholder="Enter Message"></textarea>
+                                        <textarea 
+                                            name="message" 
+                                            placeholder="Enter Message" 
+                                            required
+                                            style={{
+                                                ...inputStyles,
+                                                minHeight: '120px',
+                                                resize: 'vertical'
+                                            }}
+                                            onFocus={(e) => Object.assign(e.target.style, focusStyles)}
+                                            onBlur={(e) => {
+                                                e.target.style.borderColor = '#ddd';
+                                                e.target.style.boxShadow = 'none';
+                                            }}
+                                        ></textarea>
                                     </div>
                                 </div>
                                 <div className="col-md-12">

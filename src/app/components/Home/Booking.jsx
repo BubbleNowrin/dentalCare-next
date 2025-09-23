@@ -1,8 +1,44 @@
 'use client';
 import { useEffect } from 'react';
 import Image from 'next/image';
+import Swal from 'sweetalert2';
 
 const Booking = () => {
+  
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(e.target);
+    const formValues = Object.fromEntries(formData);
+    
+    // Validate required fields
+    if (!formValues.name || !formValues.phone || !formValues.datetime) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please fill in all required fields!',
+        confirmButtonColor: '#0BBEF2'
+      });
+      return;
+    }
+    
+    // Show success message
+    Swal.fire({
+      icon: 'success',
+      title: 'Booking Confirmed!',
+      text: 'Thank you for your appointment request. Our team will contact you shortly to confirm your booking.',
+      confirmButtonText: 'Great!',
+      confirmButtonColor: '#0BBEF2',
+      showConfirmButton: true,
+      timer: 5000,
+      timerProgressBar: true
+    }).then(() => {
+      // Reset form after confirmation
+      e.target.reset();
+    });
+  };
   useEffect(() => {
     // Simple intersection observer for text animations only
     const observerOptions = {
@@ -155,7 +191,7 @@ const Booking = () => {
             </div>
 
             <div className="tp-booking__form">
-              <form action="#">
+              <form onSubmit={handleSubmit}>
                 <div className="tp-booking__inputs">
                   <div className="input-wrap">
                     <select 
