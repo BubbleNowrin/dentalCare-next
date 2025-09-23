@@ -34,19 +34,19 @@ const Navbar = () => {
                                     <Link href="/services/pediatric-dentist"> Pediatric Dentist </Link>
                                  </li>
                                  <li>
-                                    <a href="children-dentistry.html"> Children’s Dentistry </a>
+                                    <Link href="/services/children-dentistry"> Children’s Dentistry </Link>
                                  </li>
                                  <li>
-                                    <a href="dental-implants.html"> Dental Implants </a>
+                                    <Link href="/services/dental-implants"> Dental Implants </Link>
                                  </li>
                                  <li>
-                                    <a href="cosmetic-dentistry.html"> Cosmetic Dentistry </a>
+                                    <Link href="/services/cosmetic-dentistry"> Cosmetic Dentistry </Link>
                                  </li>
                               </ul>
                            </li>
-                           <li> <a href="appointment.html"> Appointment </a></li>
-                           
-                           <li><a href="contact.html"> Contact Us </a></li>
+                           <li> <Link href="/appointment"> Appointment </Link></li>
+
+                           <li><Link href="/contact"> Contact Us </Link></li>
                         </ul>
                      </nav>
                   </div>
