@@ -1,5 +1,7 @@
 
 import Image from "next/image";
+import Link from "next/link";
+                                   
 
 const Navbar = () => {
     return (
@@ -10,26 +12,26 @@ const Navbar = () => {
             <div className="row align-items-center g-0">
                <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-6">
                   <div className="tp-main__logo">
-                     <a href="index.html">
+                     <Link href="/">
                         <Image src="/assets/img/logo/logo.png" alt="Logo" width={150} height={60} />
-                     </a>
+                     </Link>
                   </div>
                </div>
                <div className="col-xl-6 col-lg-6 d-none d-xl-block">
                   <div className="tp-main__menu d-flex justify-content-center">
                      <nav>
                         <ul>
-                           <li><a href="index.html"> Home </a>
+                           <li><Link href="/"> Home </Link>
                               
                            </li>
-                           <li><a href="about.html"> About Us </a></li>
-                           <li ><a href="#"> Our Services </a>
+                           <li><Link href="/about"> About Us </Link></li>
+                           <li ><Link href="/services"> Our Services </Link>
                               <ul className="tp-submenu">
                                  <li>
-                                    <a href="orthodontics.html"> Orthodontics </a>
+                                    <Link href="/services/orthodontics"> Orthodontics </Link>
                                  </li>
                                  <li>
-                                    <a href="pediatric-dentist.html"> Pediatric Dentist </a>
+                                    <Link href="/services/pediatric-dentist"> Pediatric Dentist </Link>
                                  </li>
                                  <li>
                                     <a href="children-dentistry.html"> Children’s Dentistry </a>
