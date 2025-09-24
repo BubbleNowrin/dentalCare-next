@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FAQAccordion from "./FAQAccordion";
 
-const ChildrenDentistry = () => {
+const PediatricDentist = () => {
     return (
         <>
         <section className="breadcrumb__area fixs p-relative breadcrumb__space breadcrumb__bg ">
@@ -23,9 +23,9 @@ const ChildrenDentistry = () => {
                     <Link href="/"> Home </Link>
                   </span>
                   <span className="dvdr"> / </span>
-                  <span> Children's Dentistry </span>
+                  <span> Cosmetic Dentistry </span>
                 </div>
-                <h3 className="breadcrumb__title">Children's Dentistry</h3>
+                <h3 className="breadcrumb__title">Cosmetic Dentistry</h3>
               </div>
             </div>
           </div>
@@ -38,12 +38,32 @@ const ChildrenDentistry = () => {
           <div className="col-xl-4 col-lg-5">
             <div className="tp-service-details-sidebar">
               <div className="tp-service-details-services">
-                <div className="tp-service-details-sidebar-title">Our Services</div>
+                <div className="tp-service-details-sidebar-title">Pediatric Dental Services</div>
                 <div className="tp-service-details-services-list">
                   <ul>
                     <li>
                       <p>
-                        Preventive Dental Care
+                        First Dental Visit & Exams
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2 12L12 2M12 2H2M12 2V12"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Preventive Cleanings & Fluoride
                         <svg
                           width="14"
                           height="14"
@@ -83,26 +103,6 @@ const ChildrenDentistry = () => {
                     </li>
                     <li>
                       <p>
-                        Fluoride Treatments
-                        <svg
-                          width="14"
-                          height="14"
-                          viewBox="0 0 14 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M2 12L12 2M12 2H2M12 2V12"
-                            stroke="currentColor"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </p>
-                    </li>
-                    <li>
-                      <p>
                         Tooth-Colored Fillings
                         <svg
                           width="14"
@@ -123,7 +123,7 @@ const ChildrenDentistry = () => {
                     </li>
                     <li>
                       <p>
-                        Emergency Dental Care
+                        Special Needs Dentistry
                         <svg
                           width="14"
                           height="14"
@@ -146,9 +146,9 @@ const ChildrenDentistry = () => {
               </div>
 
               <div className="tp-service-details-contact">
-  <div className="tp-service-details-sidebar-title">Book Appointment</div>
+  <div className="tp-service-details-sidebar-title">Book a Pediatric Appointment</div>
   <p className="pt-15 pb-15 tp-service-details-appointment">
-    9AM - 8PM ( Mon Day - Fri Day )
+    Monday – Friday: 8AM – 6PM<br />Saturday: 9AM – 1PM
   </p>
 
   <div className="tp-service-details-sidebar-info">
@@ -171,9 +171,9 @@ const ChildrenDentistry = () => {
         </svg>
       </div>
       <div className="tp-service-details-sidebar-contact-info ml-3">
-        <span>Call us at</span>
+        <span>Call for pediatric care</span>
         <p>
-          <a href="tel:099-762-472-96">+(099) 762 472 96</a>
+          <a href="tel:1800-KIDS-01">1800-KIDS-01</a>
         </p>
       </div>
     </div>
@@ -197,9 +197,9 @@ const ChildrenDentistry = () => {
         </svg>
       </div>
       <div className="tp-service-details-sidebar-contact-info ml-3">
-        <span>Email us on</span>
+        <span>Email our pediatric team</span>
         <p>
-          <a href="mailto:Infoadress@gmail.com">Infoadress@gmail.com</a>
+          <a href="mailto:kidsmile@dentalcare.com">kidsmile@dentalcare.com</a>
         </p>
       </div>
     </div>
@@ -216,34 +216,25 @@ const ChildrenDentistry = () => {
               <div className="tp-service-details-thumb">
                 <img
                   className="img-fluid"
-                  src="/assets/img/service/service-details-4.jpg"
-                  alt="Children's Dentistry"
+                  src="/assets/img/service/service-details-3.jpg"
+                  alt="Pediatric Dentistry"
                 />
               </div>
 
               <div className="tp-service-details-content">
                 <h1 className="pt-30 pb-15">
-                  Children’s Dentistry: Gentle Care for Growing Smiles
+                  Pediatric Dentistry: Gentle Care for Growing Smiles
                 </h1>
                 <p>
-                  Our children’s dentistry services are designed to create a
-                  positive, comfortable experience for kids of all ages. We
-                  focus on preventive care, education, and gentle treatments to
-                  help children develop healthy dental habits that last a
-                  lifetime.
+                  Pediatric dentistry focuses on the oral health of infants, children, and adolescents—including those with special health care needs. Our pediatric dental team is dedicated to making every visit a positive, comfortable, and educational experience for your child. We use gentle techniques, child-friendly language, and a welcoming environment to help kids develop healthy habits for life.
                 </p>
                 <p>
-                  From your child’s first dental visit to routine checkups, our
-                  friendly team is dedicated to making every appointment fun and
-                  stress-free. We use kid-friendly language, modern technology,
-                  and a compassionate approach to ensure your child’s comfort
-                  and confidence.
+                  From your baby's first tooth to their teenage years, we provide comprehensive preventive and restorative care, including exams, cleanings, sealants, fluoride treatments, fillings, and more. Our goal is to ensure your child's smile stays healthy and bright at every stage of development.
                 </p>
 
-                <h1 className="pt-30 pb-15">Key Features of Our Children’s Dentistry</h1>
+                <h1 className="pt-30 pb-15">Why Choose Our Pediatric Dental Care?</h1>
                 <p>
-                  We offer a full range of pediatric dental services to protect
-                  and nurture your child’s smile:
+                  We understand that every child is unique. Our pediatric dental services are designed to meet the needs of children and parents alike:
                 </p>
                 <div className="tp-service-details-checklist">
                   <ul>
@@ -257,7 +248,7 @@ const ChildrenDentistry = () => {
                           verticalAlign: "middle",
                         }}
                       />{" "}
-                      Preventive Exams & Cleanings
+                      Kid-friendly, welcoming environment
                     </li>
                     <li>
                       <img
@@ -269,7 +260,7 @@ const ChildrenDentistry = () => {
                           verticalAlign: "middle",
                         }}
                       />{" "}
-                      Dental Sealants for Cavity Protection
+                      Preventive care: exams, cleanings, sealants, fluoride
                     </li>
                     <li>
                       <img
@@ -281,7 +272,7 @@ const ChildrenDentistry = () => {
                           verticalAlign: "middle",
                         }}
                       />{" "}
-                      Fluoride Treatments
+                      Gentle restorative treatments (fillings, crowns)
                     </li>
                     <li>
                       <img
@@ -293,7 +284,7 @@ const ChildrenDentistry = () => {
                           verticalAlign: "middle",
                         }}
                       />{" "}
-                      Tooth-Colored Fillings
+                      Education for parents and children
                     </li>
                     <li>
                       <img
@@ -305,47 +296,41 @@ const ChildrenDentistry = () => {
                           verticalAlign: "middle",
                         }}
                       />{" "}
-                      Emergency Dental Care
+                      Special needs dentistry available
                     </li>
                   </ul>
                 </div>
 
-                <h1 className="pt-30">What to Expect: Our Process</h1>
+                <h1 className="pt-30">What to Expect at Your Child's Visit</h1>
                 <div className="row">
                   <div className="col-xl-4">
                     <div className="tp-service-detials-process mt-40">
-                      <h4 className="pt-40 pb-15">First Visit & Exam</h4>
+                      <h4 className="pt-40 pb-15">Warm Welcome & Exam</h4>
                       <p>
-                        We welcome your child with a gentle exam, oral health
-                        education, and tips for brushing and flossing at home.
+                        We greet your child and help them feel at ease. The dentist performs a gentle exam and cleaning, explaining each step in a fun, reassuring way.
                       </p>
                     </div>
                   </div>
                   <div className="col-xl-4">
                     <div className="tp-service-detials-process mt-40">
-                      <h4 className="pt-40 pb-15">Preventive Care</h4>
+                      <h4 className="pt-40 pb-15">Preventive & Restorative Care</h4>
                       <p>
-                        Regular cleanings, sealants, and fluoride treatments
-                        help keep your child’s teeth strong and cavity-free.
+                        We provide preventive treatments (sealants, fluoride) and, if needed, gentle restorative care. Parents receive tips for home care and nutrition.
                       </p>
                     </div>
                   </div>
                   <div className="col-xl-4">
                     <div className="tp-service-detials-process mt-40">
-                      <h4 className="pt-35 pb-20">Restorative & Emergency Care</h4>
+                      <h4 className="pt-35 pb-20">Ongoing Support & Growth</h4>
                       <p>
-                        If your child needs a filling or urgent care, we provide
-                        gentle, effective treatment to restore their smile
-                        quickly and comfortably.
+                        We track your child's dental development, provide regular checkups, and are always here to answer questions as your child grows.
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <p className="pt-40">
-                  We are committed to making dental visits positive and
-                  educational for your child. Schedule an appointment today to
-                  give your child the gift of a healthy, happy smile!
+                  Ready to schedule your child's visit? Contact us today for gentle, expert pediatric dental care!
                 </p>
 
           
@@ -361,4 +346,4 @@ const ChildrenDentistry = () => {
     );
 }
 
-export default ChildrenDentistry;
+export default PediatricDentist;

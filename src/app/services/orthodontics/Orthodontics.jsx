@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FAQAccordion from "./FAQAccordion";
 
-const ChildrenDentistry = () => {
+const Orthodontics = () => {
     return (
         <>
         <section className="breadcrumb__area fixs p-relative breadcrumb__space breadcrumb__bg ">
@@ -23,9 +23,9 @@ const ChildrenDentistry = () => {
                     <Link href="/"> Home </Link>
                   </span>
                   <span className="dvdr"> / </span>
-                  <span> Children's Dentistry </span>
+                  <span> Orthodontics </span>
                 </div>
-                <h3 className="breadcrumb__title">Children's Dentistry</h3>
+                <h3 className="breadcrumb__title">Orthodontics</h3>
               </div>
             </div>
           </div>
@@ -38,12 +38,12 @@ const ChildrenDentistry = () => {
           <div className="col-xl-4 col-lg-5">
             <div className="tp-service-details-sidebar">
               <div className="tp-service-details-services">
-                <div className="tp-service-details-sidebar-title">Our Services</div>
+                <div className="tp-service-details-sidebar-title">Orthodontic Treatments</div>
                 <div className="tp-service-details-services-list">
                   <ul>
                     <li>
                       <p>
-                        Preventive Dental Care
+                        Braces for Children & Teens
                         <svg
                           width="14"
                           height="14"
@@ -63,7 +63,7 @@ const ChildrenDentistry = () => {
                     </li>
                     <li>
                       <p>
-                        Dental Sealants
+                        Adult Orthodontics
                         <svg
                           width="14"
                           height="14"
@@ -83,7 +83,7 @@ const ChildrenDentistry = () => {
                     </li>
                     <li>
                       <p>
-                        Fluoride Treatments
+                        Invisalign® Clear Aligners
                         <svg
                           width="14"
                           height="14"
@@ -103,7 +103,7 @@ const ChildrenDentistry = () => {
                     </li>
                     <li>
                       <p>
-                        Tooth-Colored Fillings
+                        Retainers & Post-Treatment Care
                         <svg
                           width="14"
                           height="14"
@@ -123,7 +123,7 @@ const ChildrenDentistry = () => {
                     </li>
                     <li>
                       <p>
-                        Emergency Dental Care
+                        Jaw Alignment & Bite Correction
                         <svg
                           width="14"
                           height="14"
@@ -146,9 +146,9 @@ const ChildrenDentistry = () => {
               </div>
 
               <div className="tp-service-details-contact">
-  <div className="tp-service-details-sidebar-title">Book Appointment</div>
+  <div className="tp-service-details-sidebar-title">Book an Orthodontic Consultation</div>
   <p className="pt-15 pb-15 tp-service-details-appointment">
-    9AM - 8PM ( Mon Day - Fri Day )
+    Monday – Friday: 9AM – 6PM<br />Saturday: 10AM – 2PM
   </p>
 
   <div className="tp-service-details-sidebar-info">
@@ -171,9 +171,9 @@ const ChildrenDentistry = () => {
         </svg>
       </div>
       <div className="tp-service-details-sidebar-contact-info ml-3">
-        <span>Call us at</span>
+        <span>Call for appointments</span>
         <p>
-          <a href="tel:099-762-472-96">+(099) 762 472 96</a>
+          <a href="tel:1800-ORTHO-01">1800-ORTHO-01</a>
         </p>
       </div>
     </div>
@@ -197,9 +197,9 @@ const ChildrenDentistry = () => {
         </svg>
       </div>
       <div className="tp-service-details-sidebar-contact-info ml-3">
-        <span>Email us on</span>
+        <span>Email our team</span>
         <p>
-          <a href="mailto:Infoadress@gmail.com">Infoadress@gmail.com</a>
+          <a href="mailto:ortho@dentalcare.com">ortho@dentalcare.com</a>
         </p>
       </div>
     </div>
@@ -216,34 +216,25 @@ const ChildrenDentistry = () => {
               <div className="tp-service-details-thumb">
                 <img
                   className="img-fluid"
-                  src="/assets/img/service/service-details-4.jpg"
-                  alt="Children's Dentistry"
+                  src="/assets/img/service/service-details-1.jpg"
+                  alt="Orthodontic Treatment"
                 />
               </div>
 
               <div className="tp-service-details-content">
                 <h1 className="pt-30 pb-15">
-                  Children’s Dentistry: Gentle Care for Growing Smiles
+                  Orthodontic Treatment Overview
                 </h1>
                 <p>
-                  Our children’s dentistry services are designed to create a
-                  positive, comfortable experience for kids of all ages. We
-                  focus on preventive care, education, and gentle treatments to
-                  help children develop healthy dental habits that last a
-                  lifetime.
+                  Orthodontics is a specialized branch of dentistry focused on diagnosing, preventing, and correcting misaligned teeth and jaws. Our clinic offers a full range of orthodontic solutions for children, teens, and adults, including traditional braces, Invisalign® clear aligners, and advanced jaw alignment therapies. Our goal is to help you achieve a healthy, beautiful smile with personalized care at every step.
                 </p>
                 <p>
-                  From your child’s first dental visit to routine checkups, our
-                  friendly team is dedicated to making every appointment fun and
-                  stress-free. We use kid-friendly language, modern technology,
-                  and a compassionate approach to ensure your child’s comfort
-                  and confidence.
+                  Whether you are seeking early intervention for your child or discreet options as an adult, our experienced orthodontists use the latest technology to ensure optimal results and comfort throughout your treatment journey.
                 </p>
 
-                <h1 className="pt-30 pb-15">Key Features of Our Children’s Dentistry</h1>
+                <h1 className="pt-30 pb-15">Key Features of Our Orthodontic Services</h1>
                 <p>
-                  We offer a full range of pediatric dental services to protect
-                  and nurture your child’s smile:
+                  We are committed to providing comprehensive orthodontic care tailored to your unique needs. Our services include:
                 </p>
                 <div className="tp-service-details-checklist">
                   <ul>
@@ -257,7 +248,7 @@ const ChildrenDentistry = () => {
                           verticalAlign: "middle",
                         }}
                       />{" "}
-                      Preventive Exams & Cleanings
+                      Complimentary Initial Consultation
                     </li>
                     <li>
                       <img
@@ -269,7 +260,7 @@ const ChildrenDentistry = () => {
                           verticalAlign: "middle",
                         }}
                       />{" "}
-                      Dental Sealants for Cavity Protection
+                      Customized Treatment Plans for All Ages
                     </li>
                     <li>
                       <img
@@ -281,7 +272,7 @@ const ChildrenDentistry = () => {
                           verticalAlign: "middle",
                         }}
                       />{" "}
-                      Fluoride Treatments
+                      Modern Braces & Invisalign® Options
                     </li>
                     <li>
                       <img
@@ -293,7 +284,7 @@ const ChildrenDentistry = () => {
                           verticalAlign: "middle",
                         }}
                       />{" "}
-                      Tooth-Colored Fillings
+                      Flexible Payment & Insurance Support
                     </li>
                     <li>
                       <img
@@ -305,47 +296,41 @@ const ChildrenDentistry = () => {
                           verticalAlign: "middle",
                         }}
                       />{" "}
-                      Emergency Dental Care
+                      Ongoing Support & Retainer Care
                     </li>
                   </ul>
                 </div>
 
-                <h1 className="pt-30">What to Expect: Our Process</h1>
+                <h1 className="pt-30">Your Orthodontic Journey: What to Expect</h1>
                 <div className="row">
                   <div className="col-xl-4">
                     <div className="tp-service-detials-process mt-40">
-                      <h4 className="pt-40 pb-15">First Visit & Exam</h4>
+                      <h4 className="pt-40 pb-15">Initial Consultation</h4>
                       <p>
-                        We welcome your child with a gentle exam, oral health
-                        education, and tips for brushing and flossing at home.
+                        Meet with our orthodontist for a comprehensive exam and discuss your smile goals. We'll review your dental history, take digital scans, and answer all your questions.
                       </p>
                     </div>
                   </div>
                   <div className="col-xl-4">
                     <div className="tp-service-detials-process mt-40">
-                      <h4 className="pt-40 pb-15">Preventive Care</h4>
+                      <h4 className="pt-40 pb-15">Personalized Treatment Plan</h4>
                       <p>
-                        Regular cleanings, sealants, and fluoride treatments
-                        help keep your child’s teeth strong and cavity-free.
+                        Receive a custom treatment plan outlining your options—braces, Invisalign®, or other therapies—along with a timeline and cost estimate.
                       </p>
                     </div>
                   </div>
                   <div className="col-xl-4">
                     <div className="tp-service-detials-process mt-40">
-                      <h4 className="pt-35 pb-20">Restorative & Emergency Care</h4>
+                      <h4 className="pt-35 pb-20">Start Your Smile Transformation</h4>
                       <p>
-                        If your child needs a filling or urgent care, we provide
-                        gentle, effective treatment to restore their smile
-                        quickly and comfortably.
+                        Begin your orthodontic treatment with ongoing support from our team. We monitor your progress and provide guidance for the best results.
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <p className="pt-40">
-                  We are committed to making dental visits positive and
-                  educational for your child. Schedule an appointment today to
-                  give your child the gift of a healthy, happy smile!
+                  Ready to get started? Book your orthodontic consultation today and take the first step toward a confident, healthy smile!
                 </p>
 
           
@@ -361,4 +346,4 @@ const ChildrenDentistry = () => {
     );
 }
 
-export default ChildrenDentistry;
+export default Orthodontics;

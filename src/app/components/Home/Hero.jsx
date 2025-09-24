@@ -112,7 +112,7 @@ const Hero = () => {
                           <li><img src="/assets/img/icon/check-4.svg" alt="" /> Certified & Experienced Specialists.</li>
                           <li><img src="/assets/img/icon/check-4.svg" alt="" /> Transforming Smiles for 15+ Years.</li>
                         </ul>
-                        <a href="/contact" className="tp-btn__1 tp-btn-bg-2">
+                        <a href="/appointment" className="tp-btn__1 tp-btn-bg-2">
                           Book Your Appointment
                           <span className="icon">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -226,12 +226,11 @@ const Hero = () => {
               <div className="swiper tp-treatment__active">
                 <div className="swiper-wrapper">
                   {[
-                    { href: '/general-dentistry', img: 'general.png', label: 'General Dentistry' },
-                    { href: '/cosmetic-dentistry', img: 'cosmetic.png', label: 'Cosmetic Dentistry' },
-                    { href: '/children-dentistry', img: 'children.png', label: 'Children’s Dentistry' },
-                    { href: '/dental-implants', img: 'dental.png', label: 'Dental Implants' },
-                    { href: '/orthodontics', img: 'orthodontics.png', label: 'Orthodontics' },
-                    { href: '/pediatric-dentistry', img: 'pediatric.png', label: 'Pediatric Dentistry' },
+                    { href: '/services/cosmetic-dentistry', img: 'cosmetic.png', label: 'Cosmetic Dentistry' },
+                    { href: '/services/children-dentistry', img: 'children.png', label: 'Children’s Dentistry' },
+                    { href: '/services/dental-implants', img: 'dental.png', label: 'Dental Implants' },
+                    { href: '/services/orthodontics', img: 'orthodontics.png', label: 'Orthodontics' },
+                    { href: '/services/pediatric-dentistry', img: 'pediatric.png', label: 'Pediatric Dentistry' },
                   ].map((i) => (
                     <div className="swiper-slide" key={i.label}>
                       <div className="tp-hero__treatment-type">

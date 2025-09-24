@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import FAQAccordion from "./FAQAccordion";
 
-const ChildrenDentistry = () => {
+const DentalImplants = () => {
     return (
         <>
-        <section className="breadcrumb__area fixs p-relative breadcrumb__space breadcrumb__bg ">
+       <section className="breadcrumb__area fixs p-relative breadcrumb__space breadcrumb__bg ">
         <div className="breadcrumb__shape">
           <Image
             src="/assets/img/breadcrumb/breadcrumb-shape.png"
@@ -23,9 +23,9 @@ const ChildrenDentistry = () => {
                     <Link href="/"> Home </Link>
                   </span>
                   <span className="dvdr"> / </span>
-                  <span> Children's Dentistry </span>
+                  <span> Dental Implants </span>
                 </div>
-                <h3 className="breadcrumb__title">Children's Dentistry</h3>
+                <h3 className="breadcrumb__title">Dental Implants</h3>
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@ const ChildrenDentistry = () => {
                   <ul>
                     <li>
                       <p>
-                        Preventive Dental Care
+                        Single Tooth Implants
                         <svg
                           width="14"
                           height="14"
@@ -63,7 +63,7 @@ const ChildrenDentistry = () => {
                     </li>
                     <li>
                       <p>
-                        Dental Sealants
+                        Multiple Tooth Implants
                         <svg
                           width="14"
                           height="14"
@@ -83,7 +83,7 @@ const ChildrenDentistry = () => {
                     </li>
                     <li>
                       <p>
-                        Fluoride Treatments
+                        Full Arch Implants (All-on-4)
                         <svg
                           width="14"
                           height="14"
@@ -103,7 +103,7 @@ const ChildrenDentistry = () => {
                     </li>
                     <li>
                       <p>
-                        Tooth-Colored Fillings
+                        Bone Grafting & Sinus Lifts
                         <svg
                           width="14"
                           height="14"
@@ -123,7 +123,7 @@ const ChildrenDentistry = () => {
                     </li>
                     <li>
                       <p>
-                        Emergency Dental Care
+                        Implant-Supported Dentures
                         <svg
                           width="14"
                           height="14"
@@ -216,34 +216,25 @@ const ChildrenDentistry = () => {
               <div className="tp-service-details-thumb">
                 <img
                   className="img-fluid"
-                  src="/assets/img/service/service-details-4.jpg"
-                  alt="Children's Dentistry"
+                  src="/assets/img/service/service-details-5.jpg"
+                  alt="Dental Implants Procedure"
                 />
               </div>
 
               <div className="tp-service-details-content">
                 <h1 className="pt-30 pb-15">
-                  Children’s Dentistry: Gentle Care for Growing Smiles
+                  Dental Implant Process
                 </h1>
                 <p>
-                  Our children’s dentistry services are designed to create a
-                  positive, comfortable experience for kids of all ages. We
-                  focus on preventive care, education, and gentle treatments to
-                  help children develop healthy dental habits that last a
-                  lifetime.
+                  Dental implants are a permanent solution for replacing missing teeth, offering the look, feel, and function of natural teeth. The process involves surgically placing a titanium post into the jawbone, which acts as an artificial tooth root. Over time, the implant fuses with the bone, providing a stable foundation for a custom-made crown.
                 </p>
                 <p>
-                  From your child’s first dental visit to routine checkups, our
-                  friendly team is dedicated to making every appointment fun and
-                  stress-free. We use kid-friendly language, modern technology,
-                  and a compassionate approach to ensure your child’s comfort
-                  and confidence.
+                  Our experienced dental team uses advanced technology and gentle techniques to ensure a comfortable and successful implant experience. Whether you are missing a single tooth or require a full arch restoration, dental implants can restore your smile and confidence.
                 </p>
 
-                <h1 className="pt-30 pb-15">Key Features of Our Children’s Dentistry</h1>
+                <h1 className="pt-30 pb-15">Key Features of Our Dental Implant Services</h1>
                 <p>
-                  We offer a full range of pediatric dental services to protect
-                  and nurture your child’s smile:
+                  We are committed to providing comprehensive dental implant care tailored to your unique needs. Our services include:
                 </p>
                 <div className="tp-service-details-checklist">
                   <ul>
@@ -257,7 +248,7 @@ const ChildrenDentistry = () => {
                           verticalAlign: "middle",
                         }}
                       />{" "}
-                      Preventive Exams & Cleanings
+                      Single and Multiple Tooth Implants
                     </li>
                     <li>
                       <img
@@ -269,7 +260,7 @@ const ChildrenDentistry = () => {
                           verticalAlign: "middle",
                         }}
                       />{" "}
-                      Dental Sealants for Cavity Protection
+                      Full Arch and All-on-4 Implants
                     </li>
                     <li>
                       <img
@@ -281,7 +272,7 @@ const ChildrenDentistry = () => {
                           verticalAlign: "middle",
                         }}
                       />{" "}
-                      Fluoride Treatments
+                      Bone Grafting and Sinus Lifts
                     </li>
                     <li>
                       <img
@@ -293,7 +284,7 @@ const ChildrenDentistry = () => {
                           verticalAlign: "middle",
                         }}
                       />{" "}
-                      Tooth-Colored Fillings
+                      3D Imaging and Digital Planning
                     </li>
                     <li>
                       <img
@@ -305,47 +296,53 @@ const ChildrenDentistry = () => {
                           verticalAlign: "middle",
                         }}
                       />{" "}
-                      Emergency Dental Care
+                      Sedation Options for Comfort
+                    </li>
+                    <li>
+                      <img
+                        src="/assets/img/icon/check.svg"
+                        alt="Check Icon"
+                        style={{
+                          width: "16px",
+                          height: "16px",
+                          verticalAlign: "middle",
+                        }}
+                      />{" "}
+                      Long-Term Maintenance and Support
                     </li>
                   </ul>
                 </div>
 
-                <h1 className="pt-30">What to Expect: Our Process</h1>
+                <h1 className="pt-30">What to Expect: The Dental Implant Journey</h1>
                 <div className="row">
                   <div className="col-xl-4">
                     <div className="tp-service-detials-process mt-40">
-                      <h4 className="pt-40 pb-15">First Visit & Exam</h4>
+                      <h4 className="pt-40 pb-15">Consultation & Planning</h4>
                       <p>
-                        We welcome your child with a gentle exam, oral health
-                        education, and tips for brushing and flossing at home.
+                        We begin with a thorough examination, digital imaging, and a personalized treatment plan to ensure the best outcome for your dental health and aesthetics.
                       </p>
                     </div>
                   </div>
                   <div className="col-xl-4">
                     <div className="tp-service-detials-process mt-40">
-                      <h4 className="pt-40 pb-15">Preventive Care</h4>
+                      <h4 className="pt-40 pb-15">Implant Placement</h4>
                       <p>
-                        Regular cleanings, sealants, and fluoride treatments
-                        help keep your child’s teeth strong and cavity-free.
+                        The dental implant is gently placed into the jawbone under local anesthesia or sedation. Healing time allows the implant to integrate securely with the bone.
                       </p>
                     </div>
                   </div>
                   <div className="col-xl-4">
                     <div className="tp-service-detials-process mt-40">
-                      <h4 className="pt-35 pb-20">Restorative & Emergency Care</h4>
+                      <h4 className="pt-35 pb-20">Restoration & Aftercare</h4>
                       <p>
-                        If your child needs a filling or urgent care, we provide
-                        gentle, effective treatment to restore their smile
-                        quickly and comfortably.
+                        Once healed, a custom crown, bridge, or denture is attached to the implant. We provide guidance on caring for your new smile and offer ongoing support.
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <p className="pt-40">
-                  We are committed to making dental visits positive and
-                  educational for your child. Schedule an appointment today to
-                  give your child the gift of a healthy, happy smile!
+                  Dental implants are the gold standard for tooth replacement, offering unmatched stability, durability, and aesthetics. With proper care, your implants can last a lifetime. Schedule a consultation today to discover how dental implants can transform your smile and quality of life.
                 </p>
 
           
@@ -361,4 +358,4 @@ const ChildrenDentistry = () => {
     );
 }
 
-export default ChildrenDentistry;
+export default DentalImplants;

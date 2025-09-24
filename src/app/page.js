@@ -22,7 +22,7 @@ export default function HomePage() {
       <Booking/>
       <Appointment/>
       <Testimonial/>
-      <BrandSlider/>
+      {/* <BrandSlider/> */}
       <CTA/>
       <FAQ/>
     </>

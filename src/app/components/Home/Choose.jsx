@@ -201,7 +201,7 @@ const Choose = () => {
         <Image 
           src="/assets/img/choose/choose-2.png" 
           alt="Decorative Shape" 
-          className="shape"
+          className="shape hidden md:flex"
           width={200}
           height={200}
         />

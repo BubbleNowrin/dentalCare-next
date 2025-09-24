@@ -39,7 +39,7 @@ const AppointmentBook = () => {
  <Booking/>
             <FAQ/>
            
-            <BrandSlider/>
+            {/* <BrandSlider/> */}
 
         </>
     )
