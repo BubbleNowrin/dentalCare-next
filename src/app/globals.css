@@ -6663,6 +6663,235 @@ only screen and (min-width: 576px) and (max-width: 767px),
   }
 }
 
+/* Footer Mobile Responsiveness Improvements */
+@media (max-width: 767px) {
+  /* Footer area spacing */
+  .tp-footer__area {
+    padding-top: 60px !important;
+    padding-bottom: 20px !important;
+  }
+
+  /* Footer text (DentalCare background text) */
+  .tp-footer__text h2 {
+    font-size: 3rem !important;
+    opacity: 0.15 !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Footer widgets */
+  .tp-footer__widget {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center !important;
+  }
+
+  .tp-footer__widget:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  /* Logo sizing */
+  .tp-footer__widget .tp-footer__adress-box img {
+    max-width: 120px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  /* Address text */
+  .tp-footer__adress-box {
+    text-align: center !important;
+  }
+
+  .tp-footer__adress-box .address p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+  }
+
+  /* Social icons */
+  .tp-copyright__social {
+    margin-top: 1rem !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .tp-copyright__social a {
+    display: inline-flex !important;
+    width: 40px !important;
+    height: 40px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 50% !important;
+    margin-right: 10px !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .tp-copyright__social a:hover {
+    background: var(--tp-theme-primary) !important;
+  }
+
+  /* Footer lists */
+  .tp-footer__list {
+    margin-top: 1rem !important;
+  }
+
+  .tp-footer__list a {
+    padding: 8px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  }
+
+  .tp-footer__list a:last-child {
+    border-bottom: none !important;
+  }
+
+  /* Contact boxes */
+  .tp-footer__contact-box {
+    margin-top: 1rem !important;
+    padding: 15px 0 !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .tp-footer__contact-box .icon {
+    width: 45px !important;
+    height: 45px !important;
+    min-width: 45px !important;
+    margin-right: 15px !important;
+  }
+
+  .tp-footer__contact-box .contact-wrap p {
+    font-size: 12px !important;
+    margin-bottom: 5px !important;
+    opacity: 0.8;
+  }
+
+  .tp-footer__contact-box .contact-wrap a {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+  }
+
+  /* Copyright section */
+  .tp-copyright__style {
+    margin-top: 2rem !important;
+    padding-top: 2rem !important;
+  }
+
+  .tp-copyright__wrap .row {
+    text-align: center !important;
+  }
+
+  .tp-copyright__text {
+    margin-bottom: 1rem !important;
+  }
+
+  .tp-copyright__text p {
+    font-size: 14px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .tp-footer__menu {
+    text-align: center !important;
+    margin-top: 1rem !important;
+  }
+
+  .tp-footer__menu a {
+    display: inline-block !important;
+    font-size: 14px !important;
+    margin: 0 10px 10px 0 !important;
+    padding: 5px 0 !important;
+    border-bottom: 1px solid transparent !important;
+  }
+
+  .tp-footer__menu a:hover {
+    border-bottom-color: var(--tp-theme-primary) !important;
+  }
+
+  /* Bootstrap grid fixes for footer */
+  .tp-footer__area .row {
+    margin: 0 !important;
+  }
+
+  .tp-footer__area .col-xl-4,
+  .tp-footer__area .col-xl-6,
+  .tp-footer__area .col-lg-6,
+  .tp-footer__area .col-lg-12,
+  .tp-footer__area .col-md-12,
+  .tp-footer__area .col-md-6 {
+    padding: 0 15px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens */
+  .tp-footer__text h2 {
+    font-size: 2.5rem !important;
+  }
+
+  .tp-footer__area {
+    padding-top: 40px !important;
+  }
+
+  .tp-footer__contact-box {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .tp-footer__contact-box .icon {
+    margin-right: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .tp-footer__menu a {
+    display: block !important;
+    margin: 5px 0 !important;
+    text-align: center !important;
+  }
+}
+
+/* Additional Footer Mobile Improvements */
+@media (max-width: 991px) {
+  /* Tablet and mobile spacing adjustments */
+  .tp-footer__widget-title {
+    margin-top: 30px;
+  }
+
+  .tp-footer__widget:first-child .tp-footer__widget-title {
+    margin-top: 0;
+  }
+}
+
+/* Copyright section improvements */
+@media (max-width: 767px) {
+  .tp-copyright__style .row {
+    flex-direction: column;
+  }
+
+  .tp-copyright__text {
+    order: 2;
+    margin-top: 1rem;
+  }
+
+  .tp-footer__menu {
+    order: 1;
+  }
+}
+
+/* Footer link hover effects for mobile */
+@media (max-width: 767px) {
+  .tp-footer__list a:active,
+  .tp-footer__list a:focus {
+    background: rgba(255, 255, 255, 0.05);
+    padding-left: 10px;
+    border-radius: 4px;
+  }
+}
+
 .tp-copyright__style {
   border-top: 1px solid #FFFFFF26;
   padding: 18px 0 15px;
