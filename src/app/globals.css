@@ -8529,6 +8529,64 @@ only screen and (min-width: 576px) and (max-width: 767px),
   }
 }
 
+/* Choose section - fix horizontal scrollbar */
+.tp-choose__area {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+.tp-choose__area .container-fluid {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.tp-choose__area .row {
+  margin: 0 !important;
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.tp-choose__area .col-lg-6 {
+  overflow-x: hidden !important;
+  max-width: 50% !important;
+  flex: 0 0 50% !important;
+}
+
+@media (max-width: 991px) {
+  .tp-choose__area .col-lg-6 {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+}
+
+.tp-choose__image,
+.tp-choose__content {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Ensure images don't cause overflow */
+.tp-choose__image .img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  max-width: 100% !important;
+}
+
+/* Fix any potential body overflow */
+body {
+  overflow-x: hidden !important;
+}
+
+html {
+  overflow-x: hidden !important;
+}
+
 .tp-choose__content .tp-section-subtitle {
   border-color: #FFFFFF26;
   color: var(--tp-common-white);

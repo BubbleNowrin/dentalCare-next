@@ -23,9 +23,9 @@ const PediatricDentist = () => {
                     <Link href="/"> Home </Link>
                   </span>
                   <span className="dvdr"> / </span>
-                  <span> Cosmetic Dentistry </span>
+                  <span> Pediatric Dentistry </span>
                 </div>
-                <h3 className="breadcrumb__title">Cosmetic Dentistry</h3>
+                <h3 className="breadcrumb__title">Pediatric Dentistry</h3>
               </div>
             </div>
           </div>

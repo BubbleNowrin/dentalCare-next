@@ -1,9 +1,45 @@
 'use client';
+import { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import Swal from 'sweetalert2';
 
 const Contact = () => {
+    
+    // Form state
+    const [formData, setFormData] = useState({
+        name: '',
+        l_name: '',
+        email: '',
+        phone: '',
+        message: ''
+    });
+
+    // Handle input changes
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
+    // Phone number validation
+    const validatePhone = (phone) => {
+        const phoneRegex = /^[\+]?[\d\s\-\(\)]{10,15}$/;
+        return phoneRegex.test(phone.replace(/\s/g, ''));
+    };
+
+    // Email validation
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
+    // Handle phone input - only allow numbers and formatting characters
+    const handlePhoneInput = (e) => {
+        const value = e.target.value;
+        // Allow only numbers, spaces, +, -, (, )
+        const filteredValue = value.replace(/[^0-9\s\+\-\(\)]/g, '');
+        setFormData(prev => ({ ...prev, phone: filteredValue }));
+    };
     
     // Common input styles
     const inputStyles = {
@@ -27,28 +63,65 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        // Get form data
-        const formData = new FormData(e.target);
-        const formValues = Object.fromEntries(formData);
-        
-        // Validate required fields
-        if (!formValues.name || !formValues.email || !formValues.message) {
+        // Validate each field individually and show specific error messages
+        if (!formData.name || formData.name.trim() === '') {
             Swal.fire({
                 icon: 'error',
-                title: 'Oops...',
-                text: 'Please fill in all required fields (Name, Email, and Message)!',
+                title: 'First Name Required',
+                text: 'Please enter your first name!',
                 confirmButtonColor: '#0BBEF2'
             });
             return;
         }
-        
+
+        if (!formData.email || formData.email.trim() === '') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Email Required',
+                text: 'Please enter your email address!',
+                confirmButtonColor: '#0BBEF2'
+            });
+            return;
+        }
+
         // Validate email format
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(formValues.email)) {
+        if (!validateEmail(formData.email)) {
             Swal.fire({
                 icon: 'error',
                 title: 'Invalid Email',
                 text: 'Please enter a valid email address!',
+                confirmButtonColor: '#0BBEF2'
+            });
+            return;
+        }
+
+        // Validate phone if provided
+        if (formData.phone && formData.phone.trim() !== '' && !validatePhone(formData.phone)) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid Phone Number',
+                text: 'Please enter a valid phone number (10-15 digits)!',
+                confirmButtonColor: '#0BBEF2'
+            });
+            return;
+        }
+
+        if (!formData.message || formData.message.trim() === '') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Message Required',
+                text: 'Please enter your message!',
+                confirmButtonColor: '#0BBEF2'
+            });
+            return;
+        }
+
+        // Validate message length
+        if (formData.message.trim().length < 10) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Message Too Short',
+                text: 'Please enter a message with at least 10 characters!',
                 confirmButtonColor: '#0BBEF2'
             });
             return;
@@ -65,8 +138,14 @@ const Contact = () => {
             timer: 5000,
             timerProgressBar: true
         }).then(() => {
-            // Reset form after confirmation
-            e.target.reset();
+            // Reset form state after confirmation
+            setFormData({
+                name: '',
+                l_name: '',
+                email: '',
+                phone: '',
+                message: ''
+            });
         });
     };
 
@@ -166,8 +245,13 @@ const Contact = () => {
                                         <input 
                                             name="name" 
                                             type="text" 
-                                            placeholder="First Name" 
+                                            placeholder="First Name *" 
+                                            value={formData.name}
+                                            onChange={handleInputChange}
                                             required
+                                            minLength="2"
+                                            maxLength="50"
+                                            title="Please enter your first name (2-50 characters)"
                                             style={inputStyles}
                                             onFocus={(e) => Object.assign(e.target.style, focusStyles)}
                                             onBlur={(e) => {
@@ -182,7 +266,11 @@ const Contact = () => {
                                         <input 
                                             name="l_name" 
                                             type="text" 
-                                            placeholder="Last Name"
+                                            placeholder="Last Name (Optional)"
+                                            value={formData.l_name}
+                                            onChange={handleInputChange}
+                                            maxLength="50"
+                                            title="Optional: Enter your last name"
                                             style={inputStyles}
                                             onFocus={(e) => Object.assign(e.target.style, focusStyles)}
                                             onBlur={(e) => {
@@ -197,8 +285,12 @@ const Contact = () => {
                                         <input 
                                             name="email" 
                                             type="email" 
-                                            placeholder="Email" 
+                                            placeholder="Email Address *" 
+                                            value={formData.email}
+                                            onChange={handleInputChange}
                                             required
+                                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                            title="Please enter a valid email address"
                                             style={inputStyles}
                                             onFocus={(e) => Object.assign(e.target.style, focusStyles)}
                                             onBlur={(e) => {
@@ -212,8 +304,11 @@ const Contact = () => {
                                     <div className="tp-contact__input">
                                         <input 
                                             name="phone" 
-                                            type="text" 
-                                            placeholder="Phone Number"
+                                            type="tel" 
+                                            placeholder="Phone Number (Optional)"
+                                            value={formData.phone}
+                                            onChange={handlePhoneInput}
+                                            title="Optional: Enter your phone number"
                                             style={inputStyles}
                                             onFocus={(e) => Object.assign(e.target.style, focusStyles)}
                                             onBlur={(e) => {
@@ -227,8 +322,13 @@ const Contact = () => {
                                     <div className="tp-contact__input">
                                         <textarea 
                                             name="message" 
-                                            placeholder="Enter Message" 
+                                            placeholder="Enter Your Message * (minimum 10 characters)" 
+                                            value={formData.message}
+                                            onChange={handleInputChange}
                                             required
+                                            minLength="10"
+                                            maxLength="1000"
+                                            title="Please enter your message (10-1000 characters)"
                                             style={{
                                                 ...inputStyles,
                                                 minHeight: '120px',

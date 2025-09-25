@@ -230,7 +230,7 @@ const Hero = () => {
                     { href: '/services/children-dentistry', img: 'children.png', label: 'Children’s Dentistry' },
                     { href: '/services/dental-implants', img: 'dental.png', label: 'Dental Implants' },
                     { href: '/services/orthodontics', img: 'orthodontics.png', label: 'Orthodontics' },
-                    { href: '/services/pediatric-dentistry', img: 'pediatric.png', label: 'Pediatric Dentistry' },
+                    { href: '/services/pediatric-dentist', img: 'pediatric.png', label: 'Pediatric Dentistry' },
                   ].map((i) => (
                     <div className="swiper-slide" key={i.label}>
                       <div className="tp-hero__treatment-type">

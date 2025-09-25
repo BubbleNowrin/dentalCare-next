@@ -93,7 +93,7 @@ const Navbar = () => {
                   <div className="tp-header__right d-flex justify-content-end">
                      <div className="tp-header__action">
                         <ul>
-                           <li>
+                           {/* <li>
                               <button className="tp-header__search-btn tp-search-open-btn">
                                  <span>
                                     <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -102,7 +102,7 @@ const Navbar = () => {
                                     </svg>
                                  </span>
                               </button>
-                           </li>
+                           </li> */}
                            <li>
                               <Link href="/appointment" className="tp-btn__1 tp-btn-bg-1">Schedule a Checkup
                                  <span className="icon">

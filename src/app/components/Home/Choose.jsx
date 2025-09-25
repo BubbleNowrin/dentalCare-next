@@ -30,31 +30,33 @@ const Choose = () => {
       const chooseItems = document.querySelectorAll('.tp-choose__content ul li');
       const chooseShape = document.querySelector('.tp-choose__area .shape');
 
-      // Set initial hidden states
+      // Set initial hidden states for fade-in and slide-up effect
       [chooseImage, chooseContent, chooseShape].forEach(el => {
         if (el) {
           el.style.opacity = '0';
+          el.style.transform = 'translateY(30px)';
+          el.style.transition = 'all 0.8s ease-out';
         }
       });
 
       chooseItems.forEach(item => {
         if (item) {
           item.style.opacity = '0';
-          item.style.transform = 'translateX(-20px)';
+          item.style.transform = 'translateY(20px)';
+          item.style.transition = 'all 0.6s ease-out';
         }
       });
 
-      // Initialize GSAP animations (preferred)
+      // Simple fade-in animations using only opacity (no scrollbar issues)
       if (typeof window !== 'undefined' && window.gsap && window.ScrollTrigger) {
         try {
           window.gsap.registerPlugin(window.ScrollTrigger);
 
-          // Animate choose image from left
+          // Animate choose image with fade and slide up
           if (chooseImage) {
-            window.gsap.set(chooseImage, { opacity: 0, x: -50 });
             window.gsap.to(chooseImage, {
               opacity: 1,
-              x: 0,
+              y: 0,
               duration: 1,
               ease: "power2.out",
               scrollTrigger: {
@@ -65,13 +67,13 @@ const Choose = () => {
             });
           }
 
-          // Animate content from right
+          // Animate content with fade and slide up (with delay)
           if (chooseContent) {
-            window.gsap.set(chooseContent, { opacity: 0, x: 50 });
             window.gsap.to(chooseContent, {
               opacity: 1,
-              x: 0,
+              y: 0,
               duration: 1,
+              delay: 0.3,
               ease: "power2.out",
               scrollTrigger: {
                 trigger: chooseContent,
@@ -81,15 +83,14 @@ const Choose = () => {
             });
           }
 
-          // Animate list items with stagger
+          // Animate list items with stagger and slide up
           if (chooseItems.length > 0) {
-            window.gsap.set(chooseItems, { opacity: 0, x: -30 });
             window.gsap.to(chooseItems, {
               opacity: 1,
-              x: 0,
+              y: 0,
               duration: 0.6,
-              stagger: 0.1,
-              ease: "power2.out",
+              stagger: 0.15,
+              ease: "back.out(1.2)",
               scrollTrigger: {
                 trigger: '.tp-choose__content ul',
                 start: 'top 80%',
@@ -98,15 +99,14 @@ const Choose = () => {
             });
           }
 
-          // Animate decorative shape
+          // Animate decorative shape with fade and slide up
           if (chooseShape) {
-            window.gsap.set(chooseShape, { opacity: 0, scale: 0.8, rotation: -10 });
             window.gsap.to(chooseShape, {
               opacity: 1,
-              scale: 1,
-              rotation: 0,
+              y: 0,
               duration: 1.2,
-              ease: "back.out(1.7)",
+              delay: 0.6,
+              ease: "power2.out",
               scrollTrigger: {
                 trigger: '.tp-choose__area',
                 start: 'top 70%',
@@ -116,33 +116,45 @@ const Choose = () => {
           }
 
         } catch (error) {
-          console.log('GSAP failed, using fallback');
-          // Use intersection observer as fallback
+          console.log('GSAP failed, using simple fade fallback');
+          // Simple timeout-based animation fallback
+          setTimeout(() => {
+            [chooseImage, chooseContent, chooseShape].forEach((el, index) => {
+              if (el) {
+                setTimeout(() => {
+                  el.style.opacity = '1';
+                  el.style.transform = 'translateY(0)';
+                }, index * 300);
+              }
+            });
+            
+            chooseItems.forEach((item, index) => {
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+              }, 600 + (index * 100));
+            });
+          }, 500);
+        }
+      } else {
+        // Simple timeout-based animation fallback
+        setTimeout(() => {
           [chooseImage, chooseContent, chooseShape].forEach((el, index) => {
             if (el) {
-              el.style.transform = el === chooseImage ? 'translateX(-50px)' : 
-                                 el === chooseContent ? 'translateX(50px)' : 'scale(0.8)';
-              setTimeout(() => observer.observe(el), index * 200);
+              setTimeout(() => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+              }, index * 300);
             }
           });
           
           chooseItems.forEach((item, index) => {
-            setTimeout(() => observer.observe(item), 500 + (index * 100));
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'translateY(0)';
+            }, 600 + (index * 100));
           });
-        }
-      } else {
-        // Use intersection observer as fallback
-        [chooseImage, chooseContent, chooseShape].forEach((el, index) => {
-          if (el) {
-            el.style.transform = el === chooseImage ? 'translateX(-50px)' : 
-                               el === chooseContent ? 'translateX(50px)' : 'scale(0.8)';
-            setTimeout(() => observer.observe(el), index * 200);
-          }
-        });
-        
-        chooseItems.forEach((item, index) => {
-          setTimeout(() => observer.observe(item), 500 + (index * 100));
-        });
+        }, 500);
       }
     };
 
@@ -158,18 +170,18 @@ const Choose = () => {
   return (
     <>
       {/* Choose section */}
-      <section className="tp-choose__area">
-        <div className="container-fluid p-0">
-          <div className="row g-0">
-            <div className="col-lg-6">
-              <div className="tp-choose__image">
+      <section className="tp-choose__area" style={{overflow: 'hidden', width: '100%', maxWidth: '100vw'}}>
+        <div style={{display: 'flex', flexWrap: 'wrap', width: '100%', margin: 0, padding: 0}}>
+            
+          <div style={{flex: '1 1 50%', minWidth: '300px', overflow: 'hidden'}}>
+              <div className="tp-choose__image" style={{width: '100%', height: '100%', overflow: 'hidden'}}>
                 <Image 
                   src="/assets/img/choose/choose-1.jpg" 
                   alt="DentalCare Clinic" 
                   className="img"
                   width={600}
                   height={800}
-                  style={{objectFit: 'cover'}}
+                  style={{objectFit: 'cover', width: '100%', height: '100%', maxWidth: '100%'}}
                 />
                 <Image 
                   src="/assets/img/choose/logo.png" 
@@ -177,11 +189,12 @@ const Choose = () => {
                   className="logo"
                   width={80}
                   height={80}
+                  style={{maxWidth: '100%'}}
                 />
               </div>
             </div>
-            <div className="col-lg-6">
-              <div className="tp-choose__content">
+            <div style={{flex: '1 1 50%', minWidth: '300px', overflow: 'hidden'}}>
+              <div className="tp-choose__content" style={{width: '100%', overflow: 'hidden'}}>
                 <h3 className="tp-section-subtitle">Why Patients Choose DentalCare</h3>
                 <h3 className="tp-section-title tp-chars">Because every smile deserves expert attention.</h3>
                 <p className="para">At DentalCare, we combine compassion with innovation. With state-of-the-art technology, a highly skilled team, and a focus on patient comfort, we make dental visits a positive experience—whether it’s a routine check-up or urgent treatment.</p>
@@ -197,15 +210,18 @@ const Choose = () => {
               </div>
             </div>
           </div>
-        </div>
+       
         <Image 
           src="/assets/img/choose/choose-2.png" 
           alt="Decorative Shape" 
           className="shape hidden md:flex"
           width={200}
           height={200}
+          style={{maxWidth: '100%'}}
         />
-      </section></>)
+      </section>
+    </>
+  );
     
 }
 

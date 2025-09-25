@@ -68,7 +68,7 @@ const About = () => {
                   </div>
                </div>
                <div className="btn-wrapper">
-                  <Link href="/services/dental-implants" className="tp-btn__1 tp-btn-bg-2">Discover Our Treatments
+                  <Link href="/about" className="tp-btn__1 tp-btn-bg-2">Discover Our Treatments
                      <span className="icon">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <mask id="mask0_50_220" style={{maskType:"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
@@ -82,7 +82,7 @@ const About = () => {
                         </svg>
                      </span>
                   </Link>
-                  <Link href="/services" className="tp-btn__2">View All Services</Link>
+                  <Link href="/" className="tp-btn__2">View All Services</Link>
                </div>
             </div>
          </div>

@@ -32,7 +32,7 @@ const Ticker = () => {
           <div className="marquee-content" style={{
             display: 'inline-flex',
             alignItems: 'center',
-            animation: 'marquee 30s linear infinite',
+            animation: 'marquee 90s linear infinite',
             gap: '100px'
           }}>
             {duplicatedItems.map((text, idx) => (
