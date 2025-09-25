@@ -24,7 +24,8 @@ const Booking = () => {
         icon: 'warning',
         title: 'Missing Field',
         text: 'Please select a treatment!',
-        confirmButtonColor: '#0BBEF2'
+        confirmButtonColor: '#0BBEF2',
+        scrollbarPadding: false
       });
       return;
     }
@@ -33,7 +34,8 @@ const Booking = () => {
         icon: 'warning',
         title: 'Missing Field',
         text: 'Please choose a specialist!',
-        confirmButtonColor: '#0BBEF2'
+        confirmButtonColor: '#0BBEF2',
+        scrollbarPadding: false
       });
       return;
     }
@@ -42,7 +44,8 @@ const Booking = () => {
         icon: 'warning',
         title: 'Missing Field',
         text: 'Please select a clinic location!',
-        confirmButtonColor: '#0BBEF2'
+        confirmButtonColor: '#0BBEF2',
+        scrollbarPadding: false
       });
       return;
     }
@@ -53,7 +56,8 @@ const Booking = () => {
         icon: 'warning',
         title: 'Missing Field',
         text: 'Full name is required!',
-        confirmButtonColor: '#0BBEF2'
+        confirmButtonColor: '#0BBEF2',
+        scrollbarPadding: false
       });
       return;
     }
@@ -62,7 +66,8 @@ const Booking = () => {
         icon: 'warning',
         title: 'Missing Field',
         text: 'Phone number is required!',
-        confirmButtonColor: '#0BBEF2'
+        confirmButtonColor: '#0BBEF2',
+        scrollbarPadding: false
       });
       return;
     }
@@ -71,7 +76,8 @@ const Booking = () => {
         icon: 'error',
         title: 'Invalid Phone Number',
         text: 'Please enter a valid phone number!',
-        confirmButtonColor: '#0BBEF2'
+        confirmButtonColor: '#0BBEF2',
+        scrollbarPadding: false
       });
       return;
     }
@@ -80,7 +86,8 @@ const Booking = () => {
         icon: 'warning',
         title: 'Missing Field',
         text: 'Please select date and time!',
-        confirmButtonColor: '#0BBEF2'
+        confirmButtonColor: '#0BBEF2',
+        scrollbarPadding: false
       });
       return;
     }
