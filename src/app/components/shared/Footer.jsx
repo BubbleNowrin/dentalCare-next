@@ -100,9 +100,9 @@ const Footer = () => {
                   </div>
                   <div className="col-xl-6 col-lg-6 col-md-12">
                      <div className="tp-footer__menu text-lg-end">
-                        <Link href="#" className="text-white me-4">Privacy Policy</Link>
-                        <Link href="#" className="text-white me-4">Terms & Conditions</Link>
-                        <Link href="#" className="text-white">Legal Notice</Link>
+                        <Link href="/privacy-policy" className="text-white me-4">Privacy Policy</Link>
+                        <Link href="/terms" className="text-white me-4">Terms & Conditions</Link>
+                        <Link href="/legal-notice" className="text-white">Legal Notice</Link>
                      </div>
                   </div>
                </div>
